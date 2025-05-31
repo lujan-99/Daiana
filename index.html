@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Ti 🌸</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="fondo"></div>
+
+  <header>
+    <h1>Para mi Panqueque 🥞</h1>
+  </header>
+
+  <main>
+    <div class="mensaje">
+      <img src="img/mariposa.jpg" alt="Panqueque" class="imagen-destacada" />
+
+      <h2>Eres mi mariposa favorita</h2>
+      <p>Eres más de lo que merezco y más de lo que me pude imaginar.</p>
+      <a href="#" class="btn" onclick="mostrarModal()">Leer carta</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Hecho con amor 💖 de tu tontin</p>
+  </footer>
+
+  <!-- Mariposas flotantes -->
+  <div class="mariposa mariposa1"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="40px" /></div>
+  <div class="mariposa mariposa2"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="60px" /></div>
+  <div class="mariposa mariposa3"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="30px" /></div>
+  <div class="mariposa mariposa4"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="50px" /></div>
+  <div class="mariposa mariposa5"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="70px" /></div>
+  <div class="mariposa mariposa6"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="25px" /></div>
+  <div class="mariposa mariposa7"><img src="iconos/butterfly-moths-svgrepo-com.svg" width="55px" /></div>
+
+<!-- Modal con foto y validación -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img src="img/velu.jpg" alt="Foto" class="foto-perfil" />
+    <p>Para ingresar debes saber el nombre de este hermoso sujeto:</p>
+    <input type="text" id="nombreInput" placeholder="Escribe el nombre..." />
+    <button onclick="verificarNombre()">Ingresar</button>
+    <p id="mensajeError" class="error"></p>
+  </div>
+</div>
+
+
+<script>
+  function mostrarModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'flex';
+  }
+
+  function verificarNombre() {
+    const nombreIngresado = document.getElementById('nombreInput').value.trim().toLowerCase();
+    const nombreCorrecto = 'velu'; // cámbialo si deseas
+    const modal = document.getElementById('modal');
+
+    if (nombreIngresado === nombreCorrecto) {
+      document.getElementById('mensajeError').textContent = '';
+      modal.style.display = 'none';
+      setTimeout(() => {
+        window.location.href = 'carta.html';
+      }, 300); // Espera un poco antes de redirigir
+    } else {
+      document.getElementById('mensajeError').textContent = 'Amor te pasas como no vas a saber 😡.';
+    }
+  }
+</script>
+
+</body>
+</html>

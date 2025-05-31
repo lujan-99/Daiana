@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Belleza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mozaico {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: 300px;
+      gap: 2px;
+      z-index: 0;
+    }
+
+    .mozaico img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      transition: transform 1s ease-in-out;
+    }
+
+    .carta-overlay {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.55);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      box-sizing: border-box;
+      backdrop-filter: blur(4px);
+    }
+
+    .carta-overlay h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #b34d4d;
+      margin-bottom: 20px;
+    }
+
+    .carta-overlay p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      max-width: 700px;
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="mozaico">
+    <img src="mozaico/1.jpg" alt="Foto">
+    <img src="mozaico/2.jpg" alt="Foto">
+    <img src="mozaico/3.jpg" alt="Foto">
+    <img src="mozaico/4.jpg" alt="Foto">
+    <img src="mozaico/5.jpg" alt="Foto">
+    <img src="mozaico/6.jpg" alt="Foto">
+    <img src="mozaico/7.jpg" alt="Foto">
+    <img src="mozaico/8.jpg" alt="Foto">
+    <img src="mozaico/9.jpg" alt="Foto">
+    <img src="mozaico/10.jpg" alt="Foto">
+    <img src="mozaico/11.jpg" alt="Foto">
+    <img src="mozaico/12.jpg" alt="Foto">
+    <img src="mozaico/13.jpg" alt="Foto">
+    <img src="mozaico/14.jpg" alt="Foto">
+    <img src="mozaico/15.jpg" alt="Foto">
+    <img src="mozaico/16.jpg" alt="Foto">
+    <img src="mozaico/17.jpg" alt="Foto">
+    <img src="mozaico/18.jpg" alt="Foto">
+    <img src="mozaico/19.jpg" alt="Foto">
+    <img src="mozaico/20.jpg" alt="Foto">
+    <img src="mozaico/21.jpg" alt="Foto">
+    <img src="mozaico/22.jpg" alt="Foto">
+    <img src="mozaico/23.jpg" alt="Foto">
+    <img src="mozaico/24.png" alt="Foto">
+    <img src="mozaico/25.jpg" alt="Foto">
+  </div>
+
+  <div class="carta-overlay">
+    <h1>Tu Belleza</h1>
+    <p>
+      Desde que te vi, me volviste loco. De verdad. No podía creer que alguien como tú estuviera en mi vida. Tu belleza me desarma... y no solo hablo de lo físico (aunque claramente eres preciosa), sino de cómo me haces sentir.<br><br>
+      Tu cabello negro, tan brillante y suave, es imposible de no acariciar. Tus ojos oscuros tienen esa mirada intensa que me deja quieto, pensando en todo y en nada. Y tu silueta, esa forma tan tuya, me parece perfecta. Tu piel y su color hermoso, como si la calidez de un atardecer viviera en ti.<br><br>
+      Eres alta, grandota como me gusta abrazar. Porque cuando te abrazo, siento que el mundo se detiene. Que no necesito nada más. Me haces sentir seguro, en casa. Me haces sentir querido.<br><br>
+      Y no hay palabras exactas para decirte lo hermosa que eres. Pero si pudiera, lo escribiría en cada estrella del cielo solo para que no se te olvide nunca. No hay nadie como tú.<br><br>
+      <strong>Eres belleza, y eres mía.</strong>
+    </p>
+  </div>
+</body>
+</html>
